@@ -1,4 +1,2 @@
 shai
 ====
-
-shai website
