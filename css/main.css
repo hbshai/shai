@@ -140,6 +140,10 @@ a:hover {
     font-size: 1.2em;
 }
 
+.ipa-pronounciation {
+    font-size: 0.8em;
+}
+
 .contact {
     border-bottom: 1px dotted #000;
 }
