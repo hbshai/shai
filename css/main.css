@@ -1,0 +1,54 @@
+body {
+    font-family: Palatino, Georgia, Lucida Bright, Book Antiqua, serif;
+    font-size: 14px;
+    color: #F0F0F0;
+    background: #1D1D1D;
+}
+
+* { line-height: 1.5em; }
+
+h1 { font-size: 4em; }
+h2 { font-size: 1.75em; }
+
+body > article {
+    max-width: 40ch;
+    margin: auto;
+    text-align: center;
+    padding: 0 2ch 1em;
+    font-size: 1.1em;
+}
+
+.roboto  { font-family: 'Roboto', sans-serif }
+.monoton { font-family: 'Monoton', cursive; }
+.colorme { transition: color ease 4s !important; }
+
+.floaty {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.shadow {
+    z-index: 3;
+}
+
+a {
+    text-decoration: none;
+    color: #fe0;
+    padding: 1px;
+    background-color: #1d1d1d;
+    transition: color,background-color ease 0.2s;
+}
+
+a:hover {
+    background-color: #fe0;
+    color: #1D1D1D;
+}
+
+mark {
+    padding: 1px;
+}
