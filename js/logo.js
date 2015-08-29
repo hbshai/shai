@@ -7,16 +7,14 @@ window.onload = function() {
     }
 
     var colors = [
-            [225.0, 0.0, 204.0],
-            [225.0, 0.0, 187.0],
-            [0.0, 212.0, 225.0],
-            [0.0, 225.0, 30.0]
+            [225, 0, 204],
+            [225, 0, 187],
+            [0, 212, 225],
+            [0, 225, 30]
         ]
-    var altColor = [5.0, 5.0, 5.0]
 
     var size = colors.length
-    var to = altColor
-    var alternating = true
+    var to = colors[Math.floor(Math.random() * size)]
     
     var txt = document.getElementById('main'),
         header = document.querySelector('header'),
@@ -58,8 +56,8 @@ window.onload = function() {
         var y = oy - txt.clientHeight * 0.5
 
         // shadow SHAI text pos
-        var sx = ox + 3 * Math.cos(t * 0.001) - 3 - txt.clientWidth * 0.5
-        var sy = oy + 3 * Math.sin(t * 0.001) + 3 - txt.clientHeight * 0.5
+        var sx = ox + 3 * Math.cos(t * 0.001) - 4 - txt.clientWidth * 0.5
+        var sy = oy + 3 * Math.sin(t * 0.001) + 4 - txt.clientHeight * 0.5
 
         // ~~~~ text pos
         var hx = ox - header.clientWidth * 0.5
@@ -75,23 +73,19 @@ window.onload = function() {
 
         txt.style.color = 
         squiggly.style.color = 'rgb(' + 
-            Math.floor(clr[0]) + ',' + 
-            Math.floor(clr[1]) + ',' + 
-            Math.floor(clr[2]) + 
+            clr[0] + ',' + 
+            clr[1] + ',' + 
+            clr[2] + 
         ')'
 
         shadow.style.color = 'rgb(' + 
-            Math.floor(to[0]) + ',' + 
-            Math.floor(to[1]) + ',' + 
-            Math.floor(to[2]) + 
+            to[0] + ',' + 
+            to[1] + ',' + 
+            to[2] + 
         ')'
 
-        if (alternating)
-            to = colors[Math.floor(Math.random() * size)]
-        else
-            to = altColor
+        to = colors[Math.floor(Math.random() * size)]
 
-        alternating = !alternating
         setTimeout(color, Math.floor(Math.random() * 2000) + 3000)
     }
 
