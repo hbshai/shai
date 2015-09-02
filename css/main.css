@@ -2,17 +2,25 @@ body {
     font-family: Palatino, Georgia, Lucida Bright, Book Antiqua, serif;
     font-size: 14px;
     color: #F0F0F0;
-    background: #1D1D1D;
-    margin-top: 35px;
+    background: #151515;
+    line-height: 1.5em;
+    margin-top: calc(10% + 80px);
 }
 
-* { line-height: 1.5em; }
+h1 { 
+    font-size: 4em; 
+    font-weight: 500;
+}
+h2 { 
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    font-weight: 500;
+}
 
-h1 { font-size: 4em; }
-h2 { font-size: 1.75em; }
+article {
+    max-width: 300px;
+    max-width: 35ch;
 
-body > article {
-    max-width: 40ch;
     margin: auto;
     text-align: center;
     padding: 0 2ch 1em;
@@ -21,19 +29,26 @@ body > article {
 
 .roboto  { font-family: 'Roboto', sans-serif }
 .monoton { font-family: 'Monoton', cursive; }
-.colorme { transition: color ease 4s !important; }
 
 .floaty {
     position: absolute;
-    top: 35px;
-    left: 0;
+    top: 10%;
+    left: 50%;
     z-index: 5;
 
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0;
+    margin: 0;
+
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+
+    -webkit-transition: -webkit-transform 4s steps(19), color 3s linear;
+            transition: transform 4s steps(19), color 3s linear;
+
+    color: red;
 }
 
-.shadow {
+#shadow {
     z-index: 3;
 }
 
@@ -50,6 +65,12 @@ a:hover {
     color: #1D1D1D;
 }
 
-mark {
-    padding: 1px;
+::-moz-selection {
+    color: magenta;
+    background: black;
+}
+
+::selection {
+    color: magenta; 
+    background: black;
 }
