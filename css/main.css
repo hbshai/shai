@@ -3,6 +3,7 @@ body {
     font-size: 14px;
     color: #F0F0F0;
     background: #1D1D1D;
+    margin-top: 35px;
 }
 
 * { line-height: 1.5em; }
@@ -24,7 +25,7 @@ body > article {
 
 .floaty {
     position: absolute;
-    top: 0;
+    top: 35px;
     left: 0;
     z-index: 5;
 
@@ -38,14 +39,14 @@ body > article {
 
 a {
     text-decoration: none;
-    color: #fe0;
+    color: #FFCF0F;
     padding: 1px;
     background-color: #1d1d1d;
     transition: color,background-color ease 0.2s;
 }
 
 a:hover {
-    background-color: #fe0;
+    background-color: #FFCF0F;
     color: #1D1D1D;
 }
 
