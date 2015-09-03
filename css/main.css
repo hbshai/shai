@@ -3,8 +3,17 @@ body {
     font-size: 14px;
     color: #F0F0F0;
     background: #151515;
+    -webkit-transition: background 300s linear, color 300s linear;
+            transition: background 300s linear, color 300s linear;;
     line-height: 1.5em;
     margin-top: calc(10% + 80px);
+}
+
+body:hover {
+    background: #FF33CD;
+    color: #FFCF0F;
+    -webkit-transition: background 300s linear, color 300s linear;
+            transition: background 300s linear, color 300s linear;;
 }
 
 h1 { 
