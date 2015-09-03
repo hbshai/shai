@@ -42,8 +42,8 @@ article {
     -webkit-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
 
-    -webkit-transition: -webkit-transform 4s steps(19), color 3s linear;
-            transition: transform 4s steps(19), color 3s linear;
+    -webkit-transition: -webkit-transform 4s ease, color 3s linear;
+            transition: transform 4s ease, color 3s linear;
 
     color: red;
 }

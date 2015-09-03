@@ -21,7 +21,6 @@ window.onload = function() {
     
     var txt = document.getElementById('main')
     var shadow = document.getElementById('shadow')
-    var squiggly = document.getElementById('dots')
     
     window.onresize = function () {
         var cx = window.innerWidth * 0.5
@@ -32,14 +31,12 @@ window.onload = function() {
 
         txt.style.left =      cx - txt.clientWidth * 0.5 + 'px'
         shadow.style.left =   cx - shadow.clientWidth * 0.5 - 5 + 'px'
-        squiggly.style.left = cx - squiggly.clientWidth * 0.5 + 'px'
 
         txt.style.top =      cy - txt.clientHeight * 0.5 + 'px'
         shadow.style.top =   cy - shadow.clientHeight * 0.5 + 5 + 'px'
-        squiggly.style.top = cy + txt.clientHeight + 'px'
 
         document.body.style["margin-top"] = 20 + 
-            (cy + txt.clientHeight + squiggly.clientHeight) + 'px'
+            (cy + txt.clientHeight) + 'px'
     }
     window.onresize()
 
@@ -54,7 +51,6 @@ window.onload = function() {
         translate(shadow, 
             Math.random() * 16 - 8, 
             Math.random() * 16 - 8)
-        translate(squiggly, x, y)
 
         setTimeout(move, 4000)
     }
@@ -65,7 +61,6 @@ window.onload = function() {
             id = (nextColorId + 1) % size
 
         txt.style.color = 
-        squiggly.style.color = colors[id]
 
         shadow.style.color = colors[nextColorId]
 
