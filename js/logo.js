@@ -60,7 +60,7 @@ window.onload = function() {
         if (id === nextColorId)
             id = (nextColorId + 1) % size
 
-        txt.style.color = 
+        txt.style.color = colors[id]
 
         shadow.style.color = colors[nextColorId]
 
